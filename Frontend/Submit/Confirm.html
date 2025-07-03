@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review & Confirm - AI Compass</title>
+    <link rel="stylesheet" href="Confirm.css">
+</head>
+<body>
+    <div class="grid-bg"></div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="../Index/Index.html" class="logo">
+                    <img src="../Graphics/Logo.png" alt="Polysparks Logo" class="logo-img" onerror="this.style.display='none'">
+                    <span class="logo-text">polysparks</span>
+                </a>
+                <button class="back-btn" onclick="goBackToSubmit()">
+                    ← Back to Edit
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="review-section">
+            <div class="container">
+                <div class="page-header">
+                    <h1 class="page-title">Review & Confirm</h1>
+                    <p class="page-subtitle">
+                        Please review all the information below carefully before submitting your AI tool for review.
+                    </p>
+                </div>
+
+                <!-- Review Content -->
+                <div class="review-container">
+                    <div class="detail-section">
+                        <h3 class="detail-title">
+                            ℹ️ Basic Information
+                        </h3>
+                        <div class="detail-item">
+                            <span class="detail-label">Tool Name</span>
+                            <span class="detail-value" id="toolName">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Website URL</span>
+                            <span class="detail-value" id="toolUrl">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Tagline</span>
+                            <span class="detail-value" id="tagline">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Description</span>
+                            <span class="detail-value" id="toolDescription">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Logo/Icon</span>
+                            <span class="detail-value" id="logoStatus">-</span>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3 class="detail-title">
+                            🏷️ Categorization
+                        </h3>
+                        <div class="detail-item">
+                            <span class="detail-label">Primary Category</span>
+                            <span class="detail-value" id="toolCategory">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Tags</span>
+                            <span class="detail-value" id="tags">-</span>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3 class="detail-title">
+                            💰 Pricing Information
+                        </h3>
+                        <div class="detail-item">
+                            <span class="detail-label">Pricing Models</span>
+                            <span class="detail-value" id="pricingModels">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Pricing Details</span>
+                            <span class="detail-value" id="priceDetails">-</span>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3 class="detail-title">
+                            📊 Key Metrics
+                        </h3>
+                        <div class="detail-item">
+                            <span class="detail-label">Monthly Users</span>
+                            <span class="detail-value" id="monthlyUsers">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Total Interactions</span>
+                            <span class="detail-value" id="totalInteractions">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Languages Supported</span>
+                            <span class="detail-value" id="languagesSupported">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Average Response Time</span>
+                            <span class="detail-value" id="responseTime">-</span>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3 class="detail-title">
+                            ⚡ Powerful Features
+                        </h3>
+                        <div class="detail-item">
+                            <span class="detail-label">Key Features</span>
+                            <div class="detail-value" id="features">
+                                <div class="features-list-display">-</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3 class="detail-title">
+                            ❓ Frequently Asked Questions
+                        </h3>
+                        <div class="detail-item">
+                            <span class="detail-label">FAQs</span>
+                            <div class="detail-value" id="faqs">
+                                <div class="faqs-list-display">-</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3 class="detail-title">
+                            👤 Personal Information
+                        </h3>
+                        <div class="detail-item">
+                            <span class="detail-label">Your Name</span>
+                            <span class="detail-value" id="submitterName">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Email Address</span>
+                            <span class="detail-value" id="submitterEmail">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Company/Organization</span>
+                            <span class="detail-value" id="companyName">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Job Title</span>
+                            <span class="detail-value" id="jobTitle">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Website/Portfolio</span>
+                            <span class="detail-value" id="website">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Social Media/LinkedIn</span>
+                            <span class="detail-value" id="socialMedia">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Additional Information</span>
+                            <span class="detail-value" id="additionalInfo">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Confirmation Checkboxes -->
+                <div class="confirmation-checkbox">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="ownershipConfirm" required>
+                        <label for="ownershipConfirm" class="checkbox-label">
+                            I confirm that I am the owner or authorized representative of this AI tool and have the right to submit it to AI Compass.
+                        </label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="accuracyConfirm" required>
+                        <label for="accuracyConfirm" class="checkbox-label">
+                            I confirm that all information provided is accurate and up-to-date to the best of my knowledge.
+                        </label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="termsConfirm" required>
+                        <label for="termsConfirm" class="checkbox-label">
+                            I agree to AI Compass's terms of service and submission guidelines.
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="goBackToSubmit()">
+                        ← Back to Edit
+                    </button>
+                    <button type="button" class="btn-primary" id="submitBtn" disabled>
+                        Confirm
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h4>
+                        <a href="../Index/Index.html" class="footer-logo">
+                            <img src="../Graphics/Logo.png" alt="Polysparks Logo" class="footer-logo-img" onerror="this.style.display='none'">
+                            <span class="footer-logo-text">polysparks</span>
+                        </a>
+                    </h4>
+                </div>
+                <div class="footer-links">
+                    <h5>Explore</h5>
+                    <ul>
+                        <li><a href="../Explore/Explore.html">Explore</a></li>
+                        <li><a href="../Categories/Categories.html">Categories</a></li>
+                        <li><a href="#">New Releases</a></li>
+                        <li><a href="#">Top Rated</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="../About/About.html">About</a></li>
+                        <li><a href="../Contact/Contact.html">Contact</a></li>
+                        <li><a href="../Terms/Privacy.html">Privacy</a></li>
+                        <li><a href="../Terms/Terms.html">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 polysparks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Confirm.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - polysparks</title>
+    <link rel="stylesheet" href="About.css">
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+    
+    <!-- Enhanced Background -->
+    <div class="grid-bg"></div>
+    <div class="particles"></div>
+
+    <header id="header">
+        <div class="container">
+            <nav>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+                <a href="../Index/Index.html" class="logo">
+                    <img src="../Graphics/Logo.png" alt="Polysparks Logo" class="logo-img" onerror="this.style.display='none'">
+                    <span class="logo-text">polysparks</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="../Explore/Explore.html">Explore</a></li>
+                    <li><a href="../Categories/Categories.html">Categories</a></li>
+                    <li><a href="../Contact/Contact.html">Contact Us</a></li>
+                    <li><a href="About.html">About</a></li>
+                </ul>
+                <a href="../Submit/Submit.html" class="submit-btn">Submit Tool</a>
+            </nav>
+            
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <ul>
+                    <li><a href="../Explore/Explore.html" onclick="closeMobileMenu()">Explore</a></li>
+                    <li><a href="../Categories/Categories.html" onclick="closeMobileMenu()">Categories</a></li>
+                    <li><a href="../Contact/Contact.html" onclick="closeMobileMenu()">Contact Us</a></li>
+                    <li><a href="About.html" onclick="closeMobileMenu()">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>About polysparks</h1>
+                    <p>Empowering everyone to navigate the AI universe with confidence and discover the perfect tools for any task.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mission-vision">
+            <div class="container">
+                <div class="mv-container">
+                    <div class="mv-card">
+                        <div class="mv-icon">🎯</div>
+                        <h2>Our Mission</h2>
+                        <p>To empower everyone—from beginners to experts—to find and access the best AI tools for any task, by making AI discovery simple, intuitive, and accessible.</p>
+                    </div>
+                    
+                    <div class="mv-card">
+                        <div class="mv-icon">🚀</div>
+                        <h2>Our Vision</h2>
+                        <p>To become the world's leading AI hub where users can discover the right tools and interact with a unified AI system to complete complex workflows through a seamless, single conversation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="values-section">
+            <div class="container">
+                <h2 class="section-title">Our Values</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">🔍</div>
+                        <h3>Transparency</h3>
+                        <p>We publish clear, source-linked details about every tool so users can trust what they read.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">✨</div>
+                        <h3>Simplicity</h3>
+                        <p>Search, compare and comment in seconds — no log-in or API keys required.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">🎯</div>
+                        <h3>Accuracy</h3>
+                        <p>Listings are manually verified and kept up to date; spam or duplicate entries are removed.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">🤝</div>
+                        <h3>Community</h3>
+                        <p>Ratings and comments surface real user experiences, helping everyone choose better.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">🎓</div>
+                        <h3>Education</h3>
+                        <p>Task-based categories and clear descriptions help users quickly find the right AI, even if they're new.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">🌍</div>
+                        <h3>Accessibility</h3>
+                        <p>The directory is 100% free to browse and submit; no technical background needed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="container">
+                <h2 class="section-title">polysparks by the Numbers</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">AI Tools Listed</span>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Categories</span>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Active Users</span>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Reviews & Ratings</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Join Our Mission</h2>
+                    <p>Help us build the world's most comprehensive AI discovery platform. Whether you're a tool creator or an AI enthusiast, there's a place for you in our community.</p>
+                    <div class="cta-buttons">
+                        <a href="../Submit/Submit.html" class="cta-btn">Submit Your Tool</a>
+                        <a href="../Contact/Contact.html" class="cta-btn cta-btn-secondary">Get in Touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h4>
+                        <a href="../Index/Index.html" class="footer-logo">
+                            <img src="../Graphics/Logo.png" alt="Polysparks Logo" class="footer-logo-img" onerror="this.style.display='none'">
+                            <span class="footer-logo-text">polysparks</span>
+                        </a>
+                    </h4>
+                </div>
+                <div class="footer-links">
+                    <h5>Explore</h5>
+                    <ul>
+                        <li><a href="../Explore/Explore.html">Explore</a></li>
+                        <li><a href="../Categories/Categories.html">Categories</a></li>
+                        <li><a href="#">New Releases</a></li>
+                        <li><a href="#">Top Rated</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="../About/About.html">About</a></li>
+                        <li><a href="../Contact/Contact.html">Contact</a></li>
+                        <li><a href="../Terms/Privacy.html">Privacy</a></li>
+                        <li><a href="../Terms/Terms.html">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 polysparks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="About.js"></script>
+</body>
+</html>

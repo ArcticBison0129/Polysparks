@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - polysparks</title>
+    <link rel="stylesheet" href="Contact.css">
+</head>
+<body>
+    <div class="grid-bg"></div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+                <a href="../Index/Index.html" class="logo">
+                    <img src="../Graphics/Logo.png" alt="Polysparks Logo" class="logo-img" onerror="this.style.display='none'">
+                    <span class="logo-text">polysparks</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="../Explore/Explore.html">Explore</a></li>
+                    <li><a href="../Categories/Categories.html">Categories</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                    <li><a href="../About/About.html">About</a></li>
+                </ul>
+                <a href="../Submit/Submit.html" class="submit-btn">Submit Tool</a>
+            </nav>
+            
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <ul>
+                    <li><a href="../Explore/Explore.html" onclick="closeMobileMenu()">Explore</a></li>
+                    <li><a href="../Categories/Categories.html" onclick="closeMobileMenu()">Categories</a></li>
+                    <li><a href="Contact.html" onclick="closeMobileMenu()">Contact Us</a></li>
+                    <li><a href="../About/About.html" onclick="closeMobileMenu()">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Get in Touch</h1>
+                    <p>Have questions about AI tools or want to submit your own? We'd love to hear from you. Reach out and let's connect!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-container">
+                    <div class="contact-form">
+                        <h2>Send us a Message</h2>
+                        <form id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="submit-tool">Submit AI Tool</option>
+                                    <option value="update-tool">Update Existing AI Tool</option>
+                                    <option value="support">Report Issues / Bugs</option>
+                                    <option value="partnership">Partnership</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" placeholder="Tell us how we can help you..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-form-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <div class="faq-container">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>How do I submit an AI tool to your directory?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            You can submit your AI tool by clicking the "Submit Tool" button on the website. Fill out the simple form with your tool's details, and we'll review it within 1-3 business days. No fees or technical setup are required for basic submissions.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Is it free to list my AI tool?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            Yes! Submitting and listing your AI tool is completely free. We believe in making AI discovery accessible to everyone. While we may offer optional premium placements in the future, basic listings will always remain free.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>How long does it take to review submissions?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            Most submissions are reviewed and published within 1-3 business days. We manually verify each tool to ensure quality and accuracy. You'll receive a confirmation email once your tool is live on the platform.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Can I update my tool's information after it's listed?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            Absolutely! You can request updates anytime by contacting us through this form or emailing us directly. We're happy to help keep your tool's information accurate, up-to-date, and relevant to users.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Do I need an account to browse or submit tools?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            No account is required! Everything is open and accessible to everyone. You can browse, search, and submit without any registration. We believe in keeping things simple and barrier-free.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>What makes a good AI tool submission?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            Great submissions include clear descriptions, accurate categorization, working links, and honest information about pricing and features. Tools that solve real problems and provide genuine value to users tend to perform best in our directory.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h4>
+                        <a href="../Index/Index.html" class="footer-logo">
+                            <img src="../Graphics/Logo.png" alt="Polysparks Logo" class="footer-logo-img" onerror="this.style.display='none'">
+                            <span class="footer-logo-text">polysparks</span>
+                        </a>
+                    </h4>
+                </div>
+                <div class="footer-links">
+                    <h5>Explore</h5>
+                    <ul>
+                        <li><a href="../Explore/Explore.html">Explore</a></li>
+                        <li><a href="../Categories/Categories.html">Categories</a></li>
+                        <li><a href="#">New Releases</a></li>
+                        <li><a href="#">Top Rated</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="../About/About.html">About</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                        <li><a href="../Terms/Privacy.html">Privacy</a></li>
+                        <li><a href="../Terms/Terms.html">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 polysparks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Contact.js"></script>
+</body>
+</html>

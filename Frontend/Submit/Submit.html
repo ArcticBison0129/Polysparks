@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your AI Tool - polysparks</title>
+    <link rel="stylesheet" href="Submit.css">
+</head>
+<body>
+    <div class="grid-bg"></div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+                <a href="../Index/Index.html" class="logo">
+                    <img src="../Graphics/Logo.png" alt="Polysparks Logo" class="logo-img" onerror="this.style.display='none'">
+                    <span class="logo-text">polysparks</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="../Explore/Explore.html">Explore</a></li>
+                    <li><a href="../Categories/Categories.html">Categories</a></li>
+                    <li><a href="../Contact/Contact.html">Contact Us</a></li>
+                    <li><a href="../About/About.html">About</a></li>
+                </ul>
+                <a href="../Index/Index.html" class="back-btn">← Back to Home</a>
+            </nav>
+            
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <ul>
+                    <li><a href="../Explore/Explore.html" onclick="closeMobileMenu()">Explore</a></li>
+                    <li><a href="../Categories/Categories.html" onclick="closeMobileMenu()">Categories</a></li>
+                    <li><a href="../Contact/Contact.html" onclick="closeMobileMenu()">Contact Us</a></li>
+                    <li><a href="../About/About.html" onclick="closeMobileMenu()">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+
+                    <h1>Submit Your AI Tool</h1>
+                    <p>Join our growing directory of AI tools and help users discover your innovation. It takes just a few minutes to get started.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="submit-section">
+            <div class="container">
+                <div class="form-container">
+                    <div class="success-message" id="successMessage">
+                        🎉 Thank you! Your AI tool has been submitted successfully. We'll review it and get back to you within 24-48 hours.
+                    </div>
+
+                    <form id="submitToolForm">
+                        <!-- Basic Information Section -->
+                        <div class="form-section" data-section="basic">
+                            <div class="form-group">
+                                <h2 class="section-heading">
+                                    Basic Information
+                                </h2>
+                                
+                                <div class="form-row">
+                                    <div class="input-group">
+                                        <label class="form-label" for="toolName">
+                                            Tool Name <span class="required">*</span>
+                                        </label>
+                                        <input type="text" id="toolName" name="toolName" class="form-input" required>
+                                        <div class="input-underline"></div>
+                                    </div>
+                                    <div class="input-group">
+                                        <label class="form-label" for="toolUrl">
+                                            Website URL <span class="required">*</span>
+                                        </label>
+                                        <input type="url" id="toolUrl" name="toolUrl" class="form-input" placeholder="https://" required>
+                                        <div class="input-underline"></div>
+                                    </div>
+                                </div>
+
+                                <div class="input-group" style="margin-bottom: 24px;">
+                                    <label class="form-label" for="tagline">
+                                        Tagline <span class="required">*</span>
+                                    </label>
+                                    <input type="text" id="tagline" name="tagline" class="form-input" placeholder="A short, catchy tagline that captures your tool's essence..." required>
+                                    <div class="input-underline"></div>
+                                    <div class="form-help">Keep it under 100 characters. This will appear as a subtitle under your tool name.</div>
+                                </div>
+
+                                <div class="input-group" style="margin-bottom: 24px;">
+                                    <label class="form-label" for="toolDescription">
+                                        Description <span class="required">*</span>
+                                    </label>
+                                    <textarea id="toolDescription" name="toolDescription" class="form-textarea" placeholder="Provide a clear, compelling description of what your AI tool does and how it helps users..." required></textarea>
+                                    <div class="input-underline"></div>
+                                    <div class="form-help">Minimum 50 characters. Be specific about features and benefits.</div>
+                                </div>
+
+                                <div class="input-group">
+                                    <label class="form-label">
+                                        Logo/Icon <span class="required">*</span>
+                                    </label>
+                                    <div class="file-upload" id="logoUpload">
+                                        <input type="file" id="logo" name="logo" accept="image/*" required>
+                                        <div class="file-upload-content">
+                                            <div class="file-upload-icon">📁</div>
+                                            <div class="file-upload-text">Drop your logo here or click to upload</div>
+                                            <div class="file-upload-subtext">PNG, JPG, SVG up to 5MB. Recommended: 512x512px</div>
+                                        </div>
+                                        <div class="upload-progress" id="uploadProgress">
+                                            <div class="upload-progress-bar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Categorization Section -->
+                        <div class="form-section" data-section="categorization">
+                            <div class="form-group">
+                                <h2 class="section-heading">
+                                    Categorization
+                                </h2>
+                                
+                                <div class="form-row">
+                                    <div class="input-group">
+                                        <label class="form-label" for="toolCategory">
+                                            Primary Category <span class="required">*</span>
+                                        </label>
+                                        <select id="toolCategory" name="toolCategory" class="form-select" required>
+                                            <option value="">Select a category</option>
+                                            <option value="chat">Chat & Conversational AI</option>
+                                            <option value="writing">Writing & Content</option>
+                                            <option value="coding">Code & Development</option>
+                                            <option value="design">Design & Creative</option>
+                                            <option value="business">Business & Productivity</option>
+                                            <option value="research">Research & Analysis</option>
+                                            <option value="education">Education & Learning</option>
+                                            <option value="marketing">Marketing & Sales</option>
+                                            <option value="image">Image Generation</option>
+                                            <option value="video">Video & Audio</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <div class="input-underline"></div>
+                                    </div>
+                                    <div class="input-group">
+                                        <label class="form-label" for="tags">
+                                            Tags
+                                        </label>
+                                        <input type="text" id="tags" name="tags" class="form-input" placeholder="Type a tag and press Enter">
+                                        <div class="input-underline"></div>
+                                        <div class="tags-display" id="tagsDisplay"></div>
+                                        <div class="form-help">Add relevant tags to help users find your tool</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pricing Section -->
+                        <div class="form-section" data-section="pricing">
+                            <div class="form-group">
+                                <h2 class="section-heading">
+                                    Pricing
+                                </h2>
+                                
+                                <div style="margin-bottom: 24px;">
+                                    <label class="form-label">
+                                        Pricing Model <span class="required">*</span>
+                                    </label>
+                                    <div class="pricing-options">
+                                        <label class="pricing-option">
+                                            <input type="checkbox" name="pricing" value="free">
+                                            <div class="pricing-content">
+                                                <div class="pricing-icon">🆓</div>
+                                                <div class="pricing-label">Free</div>
+                                            </div>
+                                            <div class="pricing-check">✓</div>
+                                        </label>
+                                        <label class="pricing-option">
+                                            <input type="checkbox" name="pricing" value="freemium">
+                                            <div class="pricing-content">
+                                                <div class="pricing-icon">🎯</div>
+                                                <div class="pricing-label">Freemium</div>
+                                            </div>
+                                            <div class="pricing-check">✓</div>
+                                        </label>
+                                        <label class="pricing-option">
+                                            <input type="checkbox" name="pricing" value="one-time-paid">
+                                            <div class="pricing-content">
+                                                <div class="pricing-icon">💳</div>
+                                                <div class="pricing-label">One-time Paid</div>
+                                            </div>
+                                            <div class="pricing-check">✓</div>
+                                        </label>
+                                        <label class="pricing-option">
+                                            <input type="checkbox" name="pricing" value="subscription">
+                                            <div class="pricing-content">
+                                                <div class="pricing-icon">🔄</div>
+                                                <div class="pricing-label">Subscription</div>
+                                            </div>
+                                            <div class="pricing-check">✓</div>
+                                        </label>
+                                        <label class="pricing-option">
+                                            <input type="checkbox" name="pricing" value="pay-per-use">
+                                            <div class="pricing-content">
+                                                <div class="pricing-icon">⚡</div>
+                                                <div class="pricing-label">Pay-per-use</div>
+                                            </div>
+                                            <div class="pricing-check">✓</div>
+                                        </label>
+                                    </div>
+                                    <div class="form-help">Select all applicable pricing models for your tool</div>
+                                </div>
+
+                                <div class="input-group">
+                                    <label class="form-label" for="priceDetails">
+                                        Pricing Details
+                                    </label>
+                                    <input type="text" id="priceDetails" name="priceDetails" class="form-input" placeholder="e.g., $19/month, Free with premium at $29/month">
+                                    <div class="input-underline"></div>
+                                    <div class="form-help">Provide specific pricing information if applicable</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Key Metrics Section -->
+                        <div class="form-section" data-section="metrics">
+                            <div class="form-group">
+                                <h2 class="section-heading">
+                                    Key Metrics (Optional)
+                                </h2>
+                                
+                                <div class="form-row">
+                                    <div class="input-group">
+                                        <label class="form-label" for="monthlyUsers">Monthly Users</label>
+                                        <input type="text" id="monthlyUsers" name="monthlyUsers" class="form-input" placeholder="e.g., 50000">
+                                        <div class="input-underline"></div>
+                                        <div class="form-help">Monthly active users of your tool</div>
+                                    </div>
+                                    <div class="input-group">
+                                        <label class="form-label" for="totalInteractions">Total Interactions</label>
+                                        <input type="text" id="totalInteractions" name="totalInteractions" class="form-input" placeholder="e.g., 1000000">
+                                        <div class="input-underline"></div>
+                                        <div class="form-help">Total number of interactions/queries processed</div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="input-group">
+                                        <label class="form-label" for="languagesSupported">Languages Supported</label>
+                                        <input type="text" id="languagesSupported" name="languagesSupported" class="form-input" placeholder="e.g., 25">
+                                        <div class="input-underline"></div>
+                                        <div class="form-help">Number of languages your tool supports</div>
+                                    </div>
+                                    <div class="input-group">
+                                        <label class="form-label" for="responseTime">Average Response Time</label>
+                                        <input type="text" id="responseTime" name="responseTime" class="form-input" placeholder="e.g., 2.5s, 500ms">
+                                        <div class="input-underline"></div>
+                                        <div class="form-help">Typical response time for queries</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Key Features Section -->
+                        <div class="form-section" data-section="features">
+                            <div class="form-group">
+                                <h2 class="section-heading">
+                                    Powerful Features
+                                </h2>
+                                
+                                <label class="form-label" for="features">
+                                    Key Features <span class="required">*</span>
+                                </label>
+                                <div class="features-container">
+                                    <div class="feature-input-row">
+                                        <div class="input-group feature-input-group">
+                                            <input type="text" id="featureInput" class="form-input feature-input" placeholder="Enter a key feature...">
+                                            <div class="input-underline"></div>
+                                        </div>
+                                        <button type="button" id="addFeatureBtn" class="add-feature-btn">
+                                            <span class="btn-icon">+</span>
+                                            <span class="btn-text">Add Feature</span>
+                                        </button>
+                                    </div>
+                                    <div class="features-list" id="featuresList"></div>
+                                </div>
+                                <div class="form-help">Add 3-10 key features that make your tool powerful and unique</div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Section -->
+                        <div class="form-section" data-section="faq">
+                            <div class="form-group">
+                                <h2 class="section-heading">
+                                    Frequently Asked Questions (Optional)
+                                </h2>
+                                
+                                <div id="faqContainer">
+                                    <div class="faq-grid">
+                                        <div class="input-group">
+                                            <label class="form-label">Question</label>
+                                            <textarea id="faqQuestion" class="form-textarea" placeholder="Common question users might have..."></textarea>
+                                            <div class="input-underline"></div>
+                                        </div>
+                                        <div class="input-group">
+                                            <label class="form-label">Answer</label>
+                                            <textarea id="faqAnswer" class="form-textarea" placeholder="Clear, helpful answer..."></textarea>
+                                            <div class="input-underline"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <button type="button" id="addFaqBtn" class="add-faq-btn">
+                                        <span class="btn-icon">+</span>
+                                        <span class="btn-text">Add Another FAQ</span>
+                                    </button>
+                                    
+                                    <div class="faq-list" id="faqList"></div>
+                                </div>
+                                <div class="form-help">Help users understand your tool better with common questions and answers</div>
+                            </div>
+                        </div>
+
+                        <!-- Personal Information Section -->
+                        <div class="form-section" data-section="personal">
+                            <div class="form-group">
+                                <h2 class="section-heading">
+                                    Personal Information
+                                </h2>
+                                
+                                <div class="form-row">
+                                    <div class="input-group">
+                                        <label class="form-label" for="submitterName">
+                                            Your Name <span class="required">*</span>
+                                        </label>
+                                        <input type="text" id="submitterName" name="submitterName" class="form-input" required>
+                                        <div class="input-underline"></div>
+                                    </div>
+                                    <div class="input-group">
+                                        <label class="form-label" for="submitterEmail">
+                                            Your Email <span class="required">*</span>
+                                        </label>
+                                        <input type="email" id="submitterEmail" name="submitterEmail" class="form-input" required>
+                                        <div class="input-underline"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="input-group">
+                                        <label class="form-label" for="companyName">
+                                            Company/Organization
+                                        </label>
+                                        <input type="text" id="companyName" name="companyName" class="form-input" placeholder="Your company or organization name">
+                                        <div class="input-underline"></div>
+                                    </div>
+                                    <div class="input-group">
+                                        <label class="form-label" for="jobTitle">
+                                            Job Title
+                                        </label>
+                                        <input type="text" id="jobTitle" name="jobTitle" class="form-input" placeholder="Your role or position">
+                                        <div class="input-underline"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="input-group">
+                                        <label class="form-label" for="website">
+                                            Website/Portfolio
+                                        </label>
+                                        <input type="url" id="website" name="website" class="form-input" placeholder="https://yourwebsite.com">
+                                        <div class="input-underline"></div>
+                                    </div>
+                                    <div class="input-group">
+                                        <label class="form-label" for="socialMedia">
+                                            Social Media/LinkedIn
+                                        </label>
+                                        <input type="url" id="socialMedia" name="socialMedia" class="form-input" placeholder="https://linkedin.com/in/yourprofile">
+                                        <div class="input-underline"></div>
+                                    </div>
+                                </div>
+
+                                <div class="input-group">
+                                    <label class="form-label" for="additionalInfo">
+                                        Additional Information
+                                    </label>
+                                    <textarea id="additionalInfo" name="additionalInfo" class="form-textarea" placeholder="Any additional details, special features, or notes you'd like us to know about your tool..."></textarea>
+                                    <div class="input-underline"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-form-btn">
+                            <span class="btn-text">Review Submission</span>
+                            <div class="btn-loading">
+                                <div class="loading-spinner"></div>
+                            </div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h4>
+                        <a href="../Index/Index.html" class="footer-logo">
+                            <img src="../Graphics/Logo.png" alt="Polysparks Logo" class="footer-logo-img" onerror="this.style.display='none'">
+                            <span class="footer-logo-text">polysparks</span>
+                        </a>
+                    </h4>
+                </div>
+                <div class="footer-links">
+                    <h5>Explore</h5>
+                    <ul>
+                        <li><a href="../Explore/Explore.html">Explore</a></li>
+                        <li><a href="../Categories/Categories.html">Categories</a></li>
+                        <li><a href="#">New Releases</a></li>
+                        <li><a href="#">Top Rated</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="../About/About.html">About</a></li>
+                        <li><a href="../Contact/Contact.html">Contact</a></li>
+                        <li><a href="../Privacy/Privacy.html">Privacy</a></li>
+                        <li><a href="../Terms/Terms.html">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 polysparks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Submit.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Compass - Navigate the AI Universe</title>
+    <link rel="stylesheet" href="Index.css">
+</head>
+<body>
+    <div class="grid-bg"></div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+                <a href="Index.html" class="logo">
+                    <img src="../Graphics/Logo.png" alt="Polysparks Logo" class="logo-img" onerror="this.style.display='none'">
+                    <span class="logo-text">polysparks</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="../Explore/Explore.html">Explore</a></li>
+                    <li><a href="../Categories/Categories.html">Categories</a></li>
+                    <li><a href="../Contact/Contact.html">Contact Us</a></li>
+                    <li><a href="../About/About.html">About</a></li>
+                </ul>
+                <a href="../Submit/Submit.html" class="submit-btn">Submit Tool</a>
+            </nav>
+            
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <ul>
+                    <li><a href="../Explore/Explore.html" onclick="closeMobileMenu()">Explore</a></li>
+                    <li><a href="../Categories/Categories.html" onclick="closeMobileMenu()">Categories</a></li>
+                    <li><a href="../Contact/Contact.html" onclick="closeMobileMenu()">Contact Us</a></li>
+                    <li><a href="../About/About.html" onclick="closeMobileMenu()">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Navigate the AI Universe</h1>
+                        <p>Discover, compare, and integrate the most powerful AI tools.</p>
+                        
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="stat-number">0</span>
+                                <span class="stat-label">AI Tools</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">0</span>
+                                <span class="stat-label">Categories</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">0</span>
+                                <span class="stat-label">Users</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-visual">
+                        <div class="floating-card">
+                            <div class="card-icon">🔎</div>
+                            <div class="card-title">Discover AI</div>
+                            <div class="card-desc">Search and explore the right AI tools for you.</div>
+                        </div>
+                        <div class="floating-card">
+                            <div class="card-icon">📤</div>
+                            <div class="card-title">Submit AI</div>
+                            <div class="card-desc">Advertise your AI to reach more users.</div>
+                        </div>
+                        <div class="floating-card">
+                            <div class="card-icon">🤝</div>
+                            <div class="card-title">Engage & Contribute</div>
+                            <div class="card-desc">Join the community, share experiences, and help others.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="search-section">
+            <div class="container">
+                <div class="search-container">
+                    <h2 class="search-title">Find Your Perfect AI Tool</h2>
+                    
+                    <div class="search-box">
+                        <input type="text" class="search-input" placeholder="Search AI tools, features, or categories...">
+                        <div class="search-icon">🔍</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tools-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Trending AI Tools</h2>
+                    <a href="#" class="view-all">View All →</a>
+                </div>
+                
+                <div class="tools-masonry">
+                    <!-- Empty space maintained for future tools -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h4>
+                        <a href="Index.html" class="footer-logo">
+                            <img src="../Graphics/Logo.png" alt="Polysparks Logo" class="footer-logo-img" onerror="this.style.display='none'">
+                            <span class="footer-logo-text">polysparks</span>
+                        </a>
+                    </h4>
+                </div>
+                <div class="footer-links">
+                    <h5>Explore</h5>
+                    <ul>
+                        <li><a href="../Explore/Explore.html">Explore</a></li>
+                        <li><a href="../Categories/Categories.html">Categories</a></li>
+                        <li><a href="#">New Releases</a></li>
+                        <li><a href="#">Top Rated</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="../About/About.html">About</a></li>
+                        <li><a href="../Contact/Contact.html">Contact</a></li>
+                        <li><a href="../Terms/Privacy.html">Privacy</a></li>
+                        <li><a href="../Terms/Terms.html">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 polysparks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="Index.js"></script>
+</body>
+</html>
