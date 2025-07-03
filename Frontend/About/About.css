@@ -290,6 +290,7 @@ nav {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     animation: textShine 3s ease-in-out infinite;
+    text-transform: uppercase;
 }
 
 @keyframes textShine {

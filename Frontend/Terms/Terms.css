@@ -913,6 +913,7 @@ footer::before {
     font-size: 1.5rem;
     font-weight: 800;
     color: #00ff9d;
+    text-transform: uppercase;
 }
 
 .footer-links h5 {
