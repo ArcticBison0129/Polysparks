@@ -45,21 +45,6 @@
                     <div class="hero-text">
                         <h1>Navigate the AI Universe</h1>
                         <p>Discover, compare, and integrate the most powerful AI tools.</p>
-                        
-                        <div class="hero-stats">
-                            <div class="stat">
-                                <span class="stat-number">0</span>
-                                <span class="stat-label">AI Tools</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number">0</span>
-                                <span class="stat-label">Categories</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number">0</span>
-                                <span class="stat-label">Users</span>
-                            </div>
-                        </div>
                     </div>
                     
                     <div class="hero-visual">
@@ -89,25 +74,35 @@
                     <h2 class="search-title">Find Your Perfect AI Tool</h2>
                     
                     <div class="search-box">
-                        <input type="text" class="search-input" placeholder="Search AI tools, features, or categories...">
+                        <input type="text" class="search-input" placeholder="Search AI tools, features, or categories..." id="searchInput">
                         <div class="search-icon">🔍</div>
+                        
+                        <!-- Search Suggestions Dropdown -->
+                        <div class="search-suggestions" id="searchSuggestions">
+                            <div class="suggestion-item">
+                            </div>
+                            <div class="suggestion-item">
+                            </div>
+                            <div class="suggestion-item">
+                            </div>
+                            <div class="suggestion-item">
+                            </div>
+                            <div class="suggestion-item">
+                            </div>
+                            <div class="suggestion-item">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="tools-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Trending AI Tools</h2>
-                    <a href="#" class="view-all">View All →</a>
-                </div>
-                
-                <div class="tools-masonry">
-                    <!-- Empty space maintained for future tools -->
-                </div>
+            <section class="tools-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Trending AI Tools</h2>
+                <a href="#" class="view-all">View All →</a>
             </div>
-        </section>
     </main>
 
     <footer>
@@ -115,8 +110,8 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <h4>
-                        <a href="Index.html" class="footer-logo">
-                            <img src="../Graphics/Logo.png" alt="Polysparks Logo" class="footer-logo-img" onerror="this.style.display='none'">
+                        <a href="#" class="footer-logo">
+                            <img src="..//graphics/Logo.png" alt="Polysparks Logo" class="footer-logo-img" onerror="this.style.display='none'">
                             <span class="footer-logo-text">polysparks</span>
                         </a>
                     </h4>
@@ -145,6 +140,6 @@
             </div>
         </div>
     </footer>
+
     <script src="Index.js"></script>
 </body>
-</html>
