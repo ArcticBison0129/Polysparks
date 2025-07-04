@@ -60,40 +60,6 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
-// Enhanced FAQ functionality with animations
-function toggleFAQ(element) {
-    const faqItem = element.parentElement;
-    const isActive = faqItem.classList.contains('active');
-    
-    // Close all FAQ items with smooth animation
-    document.querySelectorAll('.faq-item').forEach(item => {
-        if (item !== faqItem) {
-            item.classList.remove('active');
-            const answer = item.querySelector('.faq-answer');
-            answer.style.maxHeight = '0';
-        }
-    });
-    
-    // Toggle clicked item
-    if (!isActive) {
-        faqItem.classList.add('active');
-        const answer = faqItem.querySelector('.faq-answer');
-        answer.style.maxHeight = answer.scrollHeight + 'px';
-        
-        // Smooth scroll to the opened FAQ
-        setTimeout(() => {
-            element.scrollIntoView({
-                behavior: 'smooth',
-                block: 'nearest'
-            });
-        }, 200);
-    } else {
-        faqItem.classList.remove('active');
-        const answer = faqItem.querySelector('.faq-answer');
-        answer.style.maxHeight = '0';
-    }
-}
-
 // Enhanced form validation and submission
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();

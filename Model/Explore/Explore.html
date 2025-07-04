@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore - polysparks</title>
+    <link rel="stylesheet" href="Explore.css">
+</head>
+
+<body>
+    <div class="grid-bg"></div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+                <a href="../Index/Index.html" class="logo">
+                    <img src="../Logo.png" alt="Polysparks Logo" class="logo-img" onerror="this.style.display='none'">
+                    <span class="logo-text">polysparks</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="Explore.html">Explore</a></li>
+                    <li><a href="../Categories/Categories.html">Categories</a></li>
+                    <li><a href="../Contact/Contact.html">Contact Us</a></li>
+                    <li><a href="../About/About.html">About</a></li>
+                </ul>
+                <a href="../Submit/Submit.html" class="submit-btn">Submit Tool</a>
+            </nav>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <ul>
+                    <li><a href="Explore.html" onclick="closeMobileMenu()">Explore</a></li>
+                    <li><a href="../Categories/Categories.html" onclick="closeMobileMenu()">Categories</a></li>
+                    <li><a href="../Contact/Contact.html" onclick="closeMobileMenu()">Contact Us</a></li>
+                    <li><a href="../About/About.html" onclick="closeMobileMenu()">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Explore AI Tools</h1>
+                <p>Discover our comprehensive collection of AI tools. Find the perfect solution for your needs.</p>
+            </div>
+        </section>
+
+        <section class="search-section">
+            <div class="container">
+                <div class="search-controls">
+                    <div class="search-box">
+                        <input type="text" class="search-input" placeholder="Search AI tools...">
+                        <span class="search-icon">🔍</span>
+                    </div>
+                    <select class="filter-dropdown">
+                        <option value="">All Categories</option>
+                        <option value="chat">Chat & Conversational AI</option>
+                        <option value="writing">Writing & Content</option>
+                        <option value="coding">Code & Development</option>
+                        <option value="design">Design & Creative</option>
+                        <option value="business">Business & Productivity</option>
+                    </select>
+                    <select class="filter-dropdown">
+                        <option value="">All Pricing</option>
+                        <option value="free">Free</option>
+                        <option value="freemium">Freemium</option>
+                        <option value="paid">Paid</option>
+                    </select>
+                    <div class="sort-controls">
+                        <span style="color: #999; font-size: 0.9rem;">Sort:</span>
+                        <button class="sort-btn active">Popular</button>
+                        <button class="sort-btn">Rating</button>
+                        <button class="sort-btn">Newest</button>
+                    </div>
+                </div>
+
+                <div class="results-info">
+                    <div>Showing 1-12 of 247 tools</div>
+                    <div class="view-toggle">
+                        <button class="view-btn active">⊞ Grid</button>
+                        <button class="view-btn">☰ List</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tools-section">
+            <div class="container">
+                <div class="tools-grid" id="toolsGrid">
+                    <!-- Tool Card 1 - ChatGPT Example -->
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-logo">🤖</div>
+                            <div class="tool-info">
+                                <h3 class="tool-name">ChatGPT</h3>
+                                <div class="tool-tagline">AI-powered conversation partner</div>
+                                <div class="tool-meta">
+                                    <div class="rating">
+                                        <div class="stars">
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                        </div>
+                                        <span class="rating-text">4.9 (2.8k)</span>
+                                    </div>
+                                    <div class="category-badge">Chat</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tool-description">
+                            AI conversational assistant that helps with writing, coding, research, and creative tasks
+                            using advanced language models.
+                        </div>
+
+                        <div class="tool-pricing">
+                            <span class="pricing-tag">Free</span>
+                            <span class="pricing-tag secondary">$20/month</span>
+                        </div>
+
+                        <div class="tool-footer">
+                            <div class="tool-actions">
+                                <a href="#" class="action-btn primary">Try Now</a>
+                                <a href="#" class="action-btn">Details</a>
+                            </div>
+                            <div class="comments-count">
+                                💬 1.2k
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tool Card 2 - Midjourney Example -->
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-logo">🎨</div>
+                            <div class="tool-info">
+                                <h3 class="tool-name">Midjourney</h3>
+                                <div class="tool-tagline">AI image generation from text</div>
+                                <div class="tool-meta">
+                                    <div class="rating">
+                                        <div class="stars">
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star empty">★</span>
+                                        </div>
+                                        <span class="rating-text">4.7 (1.9k)</span>
+                                    </div>
+                                    <div class="category-badge">Design</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tool-description">
+                            Creates stunning images from text descriptions. Perfect for artists, designers, and creators
+                            bringing imagination to life.
+                        </div>
+
+                        <div class="tool-pricing">
+                            <span class="pricing-tag">$10/month</span>
+                            <span class="pricing-tag secondary">$30/month</span>
+                        </div>
+
+                        <div class="tool-footer">
+                            <div class="tool-actions">
+                                <a href="#" class="action-btn primary">Try Now</a>
+                                <a href="#" class="action-btn">Details</a>
+                            </div>
+                            <div class="comments-count">
+                                💬 856
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tool Card 3 - GitHub Copilot Example -->
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-logo">💻</div>
+                            <div class="tool-info">
+                                <h3 class="tool-name">GitHub Copilot</h3>
+                                <div class="tool-tagline">AI pair programmer</div>
+                                <div class="tool-meta">
+                                    <div class="rating">
+                                        <div class="stars">
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                        </div>
+                                        <span class="rating-text">4.8 (3.4k)</span>
+                                    </div>
+                                    <div class="category-badge">Coding</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tool-description">
+                            AI coding assistant that helps developers write code faster with intelligent completions and
+                            suggestions.
+                        </div>
+
+                        <div class="tool-pricing">
+                            <span class="pricing-tag">Free for Students</span>
+                            <span class="pricing-tag secondary">$10/month</span>
+                        </div>
+
+                        <div class="tool-footer">
+                            <div class="tool-actions">
+                                <a href="#" class="action-btn primary">Try Now</a>
+                                <a href="#" class="action-btn">Details</a>
+                            </div>
+                            <div class="comments-count">
+                                💬 642
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tool Card 4 - Jasper Example -->
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-logo">✍️</div>
+                            <div class="tool-info">
+                                <h3 class="tool-name">Jasper AI</h3>
+                                <div class="tool-tagline">AI content creation platform</div>
+                                <div class="tool-meta">
+                                    <div class="rating">
+                                        <div class="stars">
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star empty">★</span>
+                                        </div>
+                                        <span class="rating-text">4.6 (987)</span>
+                                    </div>
+                                    <div class="category-badge">Writing</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tool-description">
+                            Comprehensive content creation platform for marketers and writers. Create blog posts, ad
+                            copy, and more at scale.
+                        </div>
+
+                        <div class="tool-pricing">
+                            <span class="pricing-tag">$39/month</span>
+                            <span class="pricing-tag secondary">$99/month</span>
+                        </div>
+
+                        <div class="tool-footer">
+                            <div class="tool-actions">
+                                <a href="#" class="action-btn primary">Try Now</a>
+                                <a href="#" class="action-btn">Details</a>
+                            </div>
+                            <div class="comments-count">
+                                💬 423
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tool Card 5 - Notion AI Example -->
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-logo">📝</div>
+                            <div class="tool-info">
+                                <h3 class="tool-name">Notion AI</h3>
+                                <div class="tool-tagline">AI workspace assistant</div>
+                                <div class="tool-meta">
+                                    <div class="rating">
+                                        <div class="stars">
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                        </div>
+                                        <span class="rating-text">4.9 (1.6k)</span>
+                                    </div>
+                                    <div class="category-badge">Productivity</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tool-description">
+                            Integrates with your Notion workspace to help write, brainstorm, edit, and summarize content
+                            seamlessly.
+                        </div>
+
+                        <div class="tool-pricing">
+                            <span class="pricing-tag">Free Trial</span>
+                            <span class="pricing-tag secondary">$10/month</span>
+                        </div>
+
+                        <div class="tool-footer">
+                            <div class="tool-actions">
+                                <a href="#" class="action-btn primary">Try Now</a>
+                                <a href="#" class="action-btn">Details</a>
+                            </div>
+                            <div class="comments-count">
+                                💬 789
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tool Card 6 - Runway ML Example -->
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-logo">🎬</div>
+                            <div class="tool-info">
+                                <h3 class="tool-name">Runway ML</h3>
+                                <div class="tool-tagline">AI video editing and generation</div>
+                                <div class="tool-meta">
+                                    <div class="rating">
+                                        <div class="stars">
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star empty">★</span>
+                                        </div>
+                                        <span class="rating-text">4.5 (756)</span>
+                                    </div>
+                                    <div class="category-badge">Video</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tool-description">
+                            AI video editing platform with text-to-video generation, editing tools, and creative
+                            features for content creators.
+                        </div>
+
+                        <div class="tool-pricing">
+                            <span class="pricing-tag">Free</span>
+                            <span class="pricing-tag secondary">$15/month</span>
+                        </div>
+
+                        <div class="tool-footer">
+                            <div class="tool-actions">
+                                <a href="#" class="action-btn primary">Try Now</a>
+                                <a href="#" class="action-btn">Details</a>
+                            </div>
+                            <div class="comments-count">
+                                💬 312
+                            </div>
+                        </div>
+                    </div>">
+                    <div class="tool-actions">
+                        <a href="#" class="action-btn primary">Try Now</a>
+                        <a href="#" class="action-btn">View Details</a>
+                    </div>
+                    <div class="comments-count">
+                        💬 856 comments
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h4>
+                        <a href="../Index/Index.html" class="footer-logo">
+                            <img src="../Logo.png" alt="Polysparks Logo" class="footer-logo-img"
+                                onerror="this.style.display='none'">
+                            <span class="footer-logo-text">polysparks</span>
+                        </a>
+                    </h4>
+                </div>
+                <div class="footer-links">
+                    <h5>Explore</h5>
+                    <ul>
+                        <li><a href="Explore.html">Explore</a></li>
+                        <li><a href="../Categories/Categories.html">Categories</a></li>
+                        <li><a href="#">New Releases</a></li>
+                        <li><a href="#">Top Rated</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="../About/About.html">About</a></li>
+                        <li><a href="../Contact/Contact.html">Contact</a></li>
+                        <li><a href="../Terms/Privacy.html">Privacy</a></li>
+                        <li><a href="../Terms/Terms.html">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 polysparks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script scr="Explore.js">
+    </script>
+</body>
