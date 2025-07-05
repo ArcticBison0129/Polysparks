@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - polysparks</title>
+    <style src="Categories.css"></style>
+</head>
+<body>
+    <div class="grid-bg"></div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+                <a href="../Logo.png" class="logo">
+                    <span>polysparks</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="#">Explore</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+                <a href="#" class="submit-btn">Submit Tool</a>
+            </nav>
+            
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <ul>
+                    <li><a href="#" onclick="closeMobileMenu()">Explore</a></li>
+                    <li><a href="#" onclick="closeMobileMenu()">Categories</a></li>
+                    <li><a href="#" onclick="closeMobileMenu()">Contact Us</a></li>
+                    <li><a href="#" onclick="closeMobileMenu()">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Categories</h1>
+                    <p>Discover AI tools organized by category. From creative writing to data analysis, find the perfect tool for your specific needs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="search-section">
+            <div class="container">
+                <div class="search-container">
+                    <div class="search-controls">
+                        <select class="sort-select" id="sortSelect" onchange="sortCategories(this.value)">
+                            <option value="name">Sort by Name</option>
+                            <option value="tools">Sort by Tool Count</option>
+                            <option value="popular">Sort by Popularity</option>
+                        </select>
+                        <button class="sort-select" onclick="clearSearch()" style="border: none; cursor: pointer;">
+                            Clear Filters
+                        </button>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" class="search-input" placeholder="Search categories or tags..." id="categorySearch">
+                        <div class="search-icon" onclick="searchCategories()">🔍</div>
+                        
+                        <!-- Search Suggestions Dropdown -->
+                        <div class="search-suggestions" id="searchSuggestions">
+                            <div class="suggestion-item" data-category="content-creation">
+                                <span class="suggestion-icon">✍️</span>
+                                <span class="suggestion-text">Content Creation</span>
+                                <span class="suggestion-category">Writing</span>
+                            </div>
+                            <div class="suggestion-item" data-category="image-generation">
+                                <span class="suggestion-icon">🎨</span>
+                                <span class="suggestion-text">Image Generation</span>
+                                <span class="suggestion-category">Design</span>
+                            </div>
+                            <div class="suggestion-item" data-category="code-development">
+                                <span class="suggestion-icon">💻</span>
+                                <span class="suggestion-text">Code & Development</span>
+                                <span class="suggestion-category">Programming</span>
+                            </div>
+                            <div class="suggestion-item" data-category="business-marketing">
+                                <span class="suggestion-icon">📈</span>
+                                <span class="suggestion-text">Business & Marketing</span>
+                                <span class="suggestion-category">Marketing</span>
+                            </div>
+                            <div class="suggestion-item" data-category="video-animation">
+                                <span class="suggestion-icon">🎬</span>
+                                <span class="suggestion-text">Video & Animation</span>
+                                <span class="suggestion-category">Video</span>
+                            </div>
+                            <div class="suggestion-item" data-category="data-analytics">
+                                <span class="suggestion-icon">📊</span>
+                                <span class="suggestion-text">Data & Analytics</span>
+                                <span class="suggestion-category">Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories-section">
+            <div class="container">
+                <div class="categories-header">
+                    <h2 class="section-title" id="categoriesTitle">AI Categories</h2>
+                    <div class="view-toggle">
+                        <button class="view-btn active" data-view="grid" title="Grid View">⊞</button>
+                        <button class="view-btn" data-view="list" title="List View">☰</button>
+                    </div>
+                </div>
+                
+                <div class="categories-grid" id="categoriesGrid">
+                    <!-- Categories will be populated here by JavaScript -->
+                </div>
+
+                <div class="empty-state" id="emptyState">
+                    <div class="empty-state-icon">📂</div>
+                    <h3>No Categories Found</h3>
+                    <p>Try adjusting your search terms or clearing the filters to see all available categories.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h4><a href="../Logo.png">polysparks</a></h4>
+                </div>
+                <div class="footer-links">
+                    <h5>Explore</h5>
+                    <ul>
+                        <li><a href="#">Explore</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">New Releases</a></li>
+                        <li><a href="#">Top Rated</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 polysparks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Categories.js"></script>
+</body>
+</html>
